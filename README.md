@@ -2,7 +2,7 @@
 
 ## Spotkania
 
-- 10.03 niedziela ??
+- 10.03 niedziela 17:00
 
 ## Taski 
 ### Do 13 marca 13:59
