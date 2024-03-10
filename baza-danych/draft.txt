@@ -1,0 +1,21 @@
+Draft tabel:
+- userzy (posiadają role, godziny pracy oraz zadania do wykonania)
+- zamówienia (klient składa zamówienie konkretnego dnia o konkretnej godzinie)
+- magazyn 
+
+Tabele:
+	User:
+		- imie
+		- nazwisko
+		- rola (Pracownik, Kierownik, Administrator)
+	Zamowienie:
+		- data
+		- status (Nowe, W trakcie, Zrealizowane)
+		- pracowni
+	Magazyn:
+		- produkt
+		- ilosc
+	Etat:
+		- pracownik
+		- godziny
+		- dzien
