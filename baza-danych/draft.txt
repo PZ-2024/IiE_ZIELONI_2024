@@ -1,21 +1,22 @@
-Draft tabel:
-- userzy (posiadają role, godziny pracy oraz zadania do wykonania)
-- zamówienia (klient składa zamówienie konkretnego dnia o konkretnej godzinie)
-- magazyn 
-
 Tabele:
-	User:
+	Pracownik:
 		- imie
 		- nazwisko
 		- rola (Pracownik, Kierownik, Administrator)
 	Zamowienie:
 		- data
-		- status (Nowe, W trakcie, Zrealizowane)
-		- pracowni
-	Magazyn:
-		- produkt
+		- godzina
+		- status (Nowe, W trakcie, Zrealizowane) (czy w aplikacji zmieniamy status lokalnie)?
+		- pracownik (1-to-m z Pracownik)
+	Produkt:
+		- nazwa
+		- ilosc
+		- cena (za sztuke)
+	Zamowienie_Produkt:
+		- produkt (1-to-m z Produkt)
+		- zamowienie (1-to-m z Zamowienie)
 		- ilosc
 	Etat:
-		- pracownik
-		- godziny
+		- pracownik (1-to-m z Pracownik)
+		- godzina
 		- dzien
