@@ -1,0 +1,54 @@
+Klasa Order:
+-id
+-status
+-content(Produkty zawarte w zamówieniu)
+-worker(osoba wykonująca zamówienie)
+-priority
+-createdAt(data stworzenia zamówienia)
+
+Klasa Worker:
+-id
+-name
+-surname
+-userType(ENum jakiś najprabdopodobniej czyli Pracownik, Kierownik, Admin)
+-login
+-password (?)
+-workingHours
+
+Klasa Product:
+-name
+-quantity
+-price
+- code(?) (jakiś kod do szybszego wyszukiwania, albo id po prostu)
+
+DatabaseController:
+- getInstance() - Singleton, żeby nie tworzyć 100 kontrolerów z połączeniem do bazy
+- sendQuerry(String querry)(wysłanie zapytania do bazy)
+
+OrderPanel:
+-workingHours - godziny pracy całej kawiarni
+-get/set_workignHours()
+-createOrder(Product[] products)
+-get/set_Status(ENUM)(tutaj też jakiś ENUM po prostu)
+-get/set_Worker(Worker worker)
+-get/set_Priority(ENUM)
+
+UserManager:
+-createUser(...)
+-updateUser(id)
+-deletUser(id)
+-restPassword(id)
+-get/set_workignHours() - godziny pracy konkretnego pracownika
+
+WarehouseManager:
+-addProduct(id,quantity)
+-updateProduct(id)
+-deleteProduct(id)
+
+RaportGenerator:
+-getWarehouseReport()
+-getWorkersReport()
+-getSaleReport
+
++ wszystkie klasy potrzebne do zrobienia GUI
+
