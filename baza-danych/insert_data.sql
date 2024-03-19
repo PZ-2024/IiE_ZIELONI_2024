@@ -33,3 +33,13 @@ INSERT INTO kawiarnia.zamowienie_produkt VALUES(3,1,2);
 INSERT INTO kawiarnia.zamowienie_produkt VALUES(2,2,1);
 INSERT INTO kawiarnia.zamowienie_produkt VALUES(5,2,1);
 INSERT INTO kawiarnia.zamowienie_produkt VALUES(6,2,1);
+
+/* Dodanie widoków */
+
+CREATE VIEW kawiarnia.dane_zamowienia AS
+SELECT z.id, data_zamowienia, status_zamowienia, pracownik, nazwa, zp.ilosc  
+FROM kawiarnia.zamowienie z
+LEFT JOIN kawiarnia.zamowienie_produkt zp 
+ON z.id = zp.zamowienie 
+LEFT JOIN kawiarnia.produkt p 
+ON p.id = zp.produkt;
