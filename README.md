@@ -4,7 +4,7 @@
 
 - [x] 10.03 niedziela 17:00
 - [x] 12.03 wtorek 16:30
-- [ ] 19.03 wtorek 16:30
+- [x] 19.03 wtorek 20:00
 
 ## Taski 
 ### Do 13 marca 13:59
