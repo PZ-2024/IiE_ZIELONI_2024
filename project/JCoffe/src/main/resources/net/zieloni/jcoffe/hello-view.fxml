@@ -1,16 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="net.zieloni.jcoffe.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.zieloni.jcoffe.HelloController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints fillHeight="false" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane id="innerGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="bg_login" stylesheets="@../../../css/style.css" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane alignment="CENTER" hgap="5.0" maxWidth="400" minWidth="300" prefWidth="300" style="-fx-padding: 20; -fx-background-color: #e5d4ba;" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <TextField fx:id="emailField" focusTraversable="false" promptText="E-mail" styleClass="field_1" stylesheets="@../../../css/style.css" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </TextField>
+               <PasswordField fx:id="passwordField" focusTraversable="false" promptText="Hasło" styleClass="field_2" stylesheets="@../../../css/style.css" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
+                  <GridPane.margin>
+                     <Insets />
+                  </GridPane.margin>
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </PasswordField>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+               <Button fx:id="submitButton" contentDisplay="CENTER" onAction="#login" prefHeight="40.0" prefWidth="175.0" styleClass="field_button_1" stylesheets="@../../../css/style.css" text="Zaloguj się" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Label alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="h1" stylesheets="@../../../css/style.css" text="Logowanie" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </Label>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="40.0" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+      </GridPane>
+      <HBox id="menu" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #895f46;">
+         <children>
+            <Button fx:id="homeButton" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="menu_button_1" stylesheets="@../../../css/style.css" HBox.hgrow="SOMETIMES" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>
